@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const mail = {
+        from: "Pengirim@gmail.com",
+        sendMessage: function (msg,to){
+            console.log(`you send: ${msg} to ${to} from ${this.from}`)
+        }
+    }
+    console.log(mail.from);
+    mail.sendMessage("apakabar", "penerima@gmail.com");
+    mail.saveContact =  function(addr){
+        console.log(`email saved ${addr}`);
+    }
+    mail.saveContact("Alexsander@gmail.com");
+</script>
+</body>
+</html>

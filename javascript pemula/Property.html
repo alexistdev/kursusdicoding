@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Property</title>
+  <script src="js/Mail.js"></script>
+</head>
+<body>
+<script>
+
+  //cara 1
+  const mail1 = new Mail();
+  mail1.sendMessage("halo","alexsander@gmail.com", "alex@gmail.com");
+
+  console.table(mail1.showAllContacts());
+  Mail.phoneNumber("82345678");//static method
+
+  //cara 2
+  function Mail2(){
+    this.from = 'pengirim@gmail.com';
+    this.contacts = [];
+    this.yourOtherProperty = 'the values';
+  }
+  Mail2.prototype.sendMessage = function (msg,to){
+    console.log(`you send: ${msg} to ${to} from ${this.from}`);
+    this.contacts.push(to)
+  }
+</script>
+</body>
+</html>
